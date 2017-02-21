@@ -1,10 +1,8 @@
 environment:
-  # these variables are common to all jobs
-  nodeVersion: "6"
 
   matrix:
     # node.js
-    - nodejs_version: nodeVersion
+    - nodejs_version: "6"
 
 install:
 # Get latest stable version of nodejs
