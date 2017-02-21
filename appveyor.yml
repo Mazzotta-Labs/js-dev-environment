@@ -1,6 +1,6 @@
 environment:
   # these variables are common to all jobs
-  nodeVersion: "7"
+  nodeVersion: "6"
 
   matrix:
     # node.js
