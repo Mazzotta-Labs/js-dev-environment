@@ -1,0 +1,23 @@
+environment:
+  # these variables are common to all jobs
+  nodeVersion: "7"
+
+  matrix:
+    # node.js
+    - nodejs_version: nodeVersion
+
+install:
+# Get latest stable version of nodejs
+- ps: Install-Product node $env:nodejs_version
+- npm install
+
+# Post-install test scripts.
+test_script:
+# Output useful debugging infos
+- node --version
+- npm --version
+# run tests
+- npm test
+
+# Dont actually build
+build: off
