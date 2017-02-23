@@ -19,7 +19,8 @@
     "clean-dist": "rimraf ./dist && mkdir dist",
     "prebuild": "npm-run-all clean-dist test lint",
     "build": "babel-node buildScripts/build.js",
-    "postbuild": "babel-node buildScripts/distServer.js"
+    "postbuild": "babel-node buildScripts/distServer.js",
+    "deploy": "surge ./dist"
   },
   "author": "RobiLabs",
   "license": "MIT",
@@ -55,6 +56,7 @@
     "numeral": "1.5.3",
     "open": "0.0.5",
     "rimraf": "2.5.4",
+    "surge":"0.18.0",
     "style-loader": "0.13.1",
     "webpack": "1.13.2",
     "webpack-dev-middleware": "1.8.4",
